@@ -1,0 +1,224 @@
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/R7KScript/usernaxo/refs/heads/main/GUI3")))()
+MakeWindow({
+  Hub = {
+    Title = "H_R| کْلَ أّلَمًأّبًأّتٌ",
+    Animation = "جار التحميل... "
+  },
+  Key = {
+    KeySystem = false,
+    Title = "Key System",
+    Description = "",
+    KeyLink = "",
+    Keys = {"1234"},
+    Notifi = {
+      Notifications = true,
+      CorrectKey = "Running the Script...",
+      Incorrectkey = "The key is incorrect",
+      CopyKeyLink = "Copied to Clipboard"
+    }
+  }
+})
+MinimizeButton({
+  Image = "rbxassetid://104695661342649",
+  Size = {40, 40},
+  Color = Color3.fromRGB(255, 255, 255),
+  Corner = true,
+  Stroke = false,
+  StrokeColor = Color3.fromRGB(255, 255, 255)
+})
+
+local Main = MakeTab({Name = "منور|ة السكربت"})
+
+local Main = MakeTab({Name = "صّـمًلَأّتٌ عٌشُـوٌأّئيِّةّ"}) 
+
+AddButton(Main, {
+  Name = "طـيـࢪآن",
+  Callback = function()
+  loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+  end
+})
+
+AddButton(Main, {
+  Name = "رحًمًهّةّ+18",
+  Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/n0kc/AtomicHub/main/Map-Al-Biout.lua"))()
+  end
+})
+AddButton(Main, {
+  Name = "anti sit | ضد الجلوس",
+  Callback = function()
+    -- https://scriptblox.com/script/Universal-Script-Anti-sit-script-38345
+
+loadstring(game:HttpGet('https://paste.myconan.net/573222.txt'))()
+
+local Workspace = game:GetService("Workspace")
+local Players = game:GetService("Players")
+
+local player = Players.LocalPlayer
+
+local function neutralizarAsiento(asiento)
+ if asiento:IsA("Seat") or asiento:IsA("VehicleSeat") then
+  asiento.Disabled = true
+  asiento.CanTouch = false
+  asiento:SetAttribute("Neutralizado", true)
+ end
+end
+
+for _, objeto in ipairs(Workspace:GetDescendants()) do
+ neutralizarAsiento(objeto)
+end
+
+Workspace.DescendantAdded:Connect(function(obj)
+ if obj:IsA("Seat") or obj:IsA("VehicleSeat") then
+  task.wait(0.1)
+  neutralizarAsiento(obj)
+ end
+end)
+
+player.CharacterAdded:Connect(function(char)
+ local humanoid = char:WaitForChild("Humanoid")
+ humanoid:GetPropertyChangedSignal("Sit"):Connect(function()
+  if humanoid.Sit then
+   humanoid.Sit = false
+  end
+ end)
+end)
+
+print("Anti-sit is working.... Men.. I hate that chair...")
+  end
+})
+
+
+AddButton(Main, {
+  Name = "anti bang | ضد البانج",
+  Callback = function()
+-- https://scriptblox.com/script/Universal-Script-Gaze-Anti-bang-V1-22240
+
+local TeleportTime = 0.1
+
+
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local TweenService = game:GetService("TweenService")
+
+
+local localPlayer = Players.LocalPlayer
+
+local function resetCameraSubject()
+ if workspace.CurrentCamera and localPlayer.Character then
+  local humanoid = localPlayer.Character:FindFirstChildWhichIsA("Humanoid")
+  if humanoid then
+   workspace.CurrentCamera.CameraSubject = humanoid
+  end
+ end
+end
+
+local plr = Players.LocalPlayer
+local character = plr.Character or plr.CharacterAdded:Wait()
+local hrp = character:WaitForChild("HumanoidRootPart")
+local gui = Instance.new("ScreenGui")
+local btn = Instance.new("TextButton")
+
+local toggle = false
+local targetPos = Vector3.new(905, -500, 0)
+local lastPos = hrp.Position
+local velConn
+
+gui.Parent = plr:WaitForChild("PlayerGui")
+
+btn.Size = UDim2.new(0, 100, 0, 50)
+btn.Position = UDim2.new(0.5, -50, 0.5, -25)
+btn.Text = "Toggle OFF"
+btn.BackgroundColor3 = Color3.new(0.7, 0.7, 0.7)
+btn.TextColor3 = Color3.new(1, 1, 1)
+btn.Draggable = true
+btn.Parent = gui
+
+local function createTween(targetCFrame)
+    local tweenInfo = TweenInfo.new(TeleportTime, Enum.EasingStyle.Linear, Enum.EasingDirection.Out)
+    return TweenService:Create(hrp, tweenInfo, {CFrame = targetCFrame})
+end
+
+local function startVelLoop()
+    velConn = RunService.Heartbeat:Connect(function()
+        if toggle then
+            hrp.Velocity = Vector3.new(0, 0, 0)
+        end
+    end)
+end
+
+local function stopVelLoop()
+    if velConn then
+        velConn:Disconnect()
+        velConn = nil
+    end
+end
+
+local function toggleTween()
+    if toggle then
+        toggle = false
+        btn.Text = "OFF"
+        btn.BackgroundColor3 = Color3.new(1, 0, 0)
+        stopVelLoop()
+        local tweenBack = createTween(CFrame.new(lastPos))
+        tweenBack:Play()
+        tweenBack.Completed:Wait()
+        workspace.FallenPartsDestroyHeight = -500
+        resetCameraSubject()
+        if workspace:FindFirstChild("Gaze") then
+            workspace.Gaze:Destroy()
+        end
+    else
+    lastPos = hrp.Position
+    local part = Instance.new("Part")
+        part.Size = Vector3.new(4, 1, 4)
+        part.Position = lastPos
+        part.Anchored = true
+        part.CanCollide = false
+        part.Transparency = 0.5
+        part.Name = "Gaze"
+        part.Parent = game.Workspace
+        workspace.CurrentCamera.CameraSubject = part
+        toggle = true
+        btn.Text = "ON"
+        btn.BackgroundColor3 = Color3.new(0, 1, 0)
+        
+        wait()
+        workspace.FallenPartsDestroyHeight = -1000
+        local tweenToTarget = createTween(CFrame.new(targetPos))
+        tweenToTarget:Play()
+        tweenToTarget.Completed:Wait()
+        startVelLoop()
+        
+    end
+end
+
+btn.MouseButton1Click:Connect(toggleTween)
+  end
+})
+
+AddButton(Main, {
+  Name = "شُـبًيِّهّـةّ نِيِّنِجّـأّ",
+  Callback = function()
+  -- https://scriptblox.com/script/Universal-Script-FE-Illusion-Script-22335
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe/main/obf_11l7Y131YqJjZ31QmV5L8pI23V02b3191sEg26E75472Wl78Vi8870jRv5txZyL1.lua.txt"))()
+  end
+})
+
+AddButton(Main, {
+  Name = "أّدٍمًنِ𝑭𝑬",
+  Callback = function()
+-- https://scriptblox.com/script/Infinite-Yield_500
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+  end
+})
+
+
+AddButton(Main, {
+  Name = "انتظرو اشياء اكثر",
+  Callback = function()
+    
+  end
+})
