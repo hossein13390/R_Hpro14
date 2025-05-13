@@ -27,22 +27,6 @@ MinimizeButton({
   StrokeColor = Color3.fromRGB(255, 255, 255)
 })
 
-local Main = MakeTab({Name = "حـقـوق"})
-
-AddButton(Main, {
-  Name = "-- حقوق H_R --",
-  Callback = function()
-    
-  end
-})
-
-AddButton(Main, {
-  Name = "تلي @hossein13390",
-  Callback = function()
-    
-  end
-})
-
 
 local Main = MakeTab({Name = "صّـمًلَأّتٌ عٌشُـوٌأّئيِّةّ"}) 
 
