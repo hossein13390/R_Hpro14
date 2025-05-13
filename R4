@@ -227,17 +227,38 @@ AddButton(Main, {
 })
 
 AddButton(Main, {
-  Name = "قتل بل سيارة |لازم تركب السيارة",
+  Name = "sander X",
   Callback = function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Better-Bring-Parts-Ui-SOLARA-and-Fixed-Lags-21780"))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/kigredns/SanderXV4.2.2/refs/heads/main/NormalSS.lua'))()
+  end
+})
+
+AddButton(Main, {
+  Name = "sp hub ",
+  Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/as6cd0/SP_Hub/refs/heads/main/Brookhaven"))()
   end
 })
 
 
 AddButton(Main, {
-  Name = "sander X",
+  Name = "the darkones hub",
   Callback = function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/kigredns/SanderXV4.2.2/refs/heads/main/NormalSS.lua'))()
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/TheDarkoneMarcillisePex/Other-Scripts/main/Brook%20Haven%20Gui'))()
+  end
+})
+
+AddButton(Main, {
+  Name = "سكربت برميوم مسرب جديد",
+  Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/gjQUGX/DXVUSEW/refs/heads/main/Sunterium-Hub/DELTA"))()
+  end
+})
+
+AddButton(Main, {
+  Name = "jul hub",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JulHubz/JulHub/main/JulHub"))()
   end
 })
 
