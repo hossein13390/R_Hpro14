@@ -222,3 +222,36 @@ AddButton(Main, {
     
   end
 })
+
+
+local Main = MakeTab({Name = "ماب البيوت|brookhaven "}) 
+
+
+AddButton(Main, {
+  Name = "قتل و سحب",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SnoobG/Lua-Script-s/refs/heads/main/Tvon"))()
+  end
+})
+
+AddButton(Main, {
+  Name = "قتل بل سيارة |لازم تركب السيارة",
+  Callback = function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Better-Bring-Parts-Ui-SOLARA-and-Fixed-Lags-21780"))()
+  end
+})
+
+
+AddButton(Main, {
+  Name = "sander X",
+  Callback = function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/kigredns/SanderXV4.2.2/refs/heads/main/NormalSS.lua'))()
+  end
+})
+
+AddButton(Main, {
+  Name = "قريبا سكربتات اكثر",
+  Callback = function()
+  
+  end
+})
