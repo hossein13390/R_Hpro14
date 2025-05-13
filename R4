@@ -249,16 +249,9 @@ AddButton(Main, {
 })
 
 AddButton(Main, {
-  Name = "سكربت برميوم مسرب جديد",
+  Name = "نص جي جي بروكهافن",
   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/gjQUGX/DXVUSEW/refs/heads/main/Sunterium-Hub/DELTA"))()
-  end
-})
-
-AddButton(Main, {
-  Name = "jul hub",
-  Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JulHubz/JulHub/main/JulHub"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/joygril/Brookhaven-RP-JG-Hub/refs/heads/main/Developer-Jeon-Canis.txt"))()
   end
 })
 
