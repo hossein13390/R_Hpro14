@@ -216,14 +216,6 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/
 })
 
 
-AddButton(Main, {
-  Name = "انتظرو اشياء اكثر",
-  Callback = function()
-    
-  end
-})
-
-
 local Main = MakeTab({Name = "ماب البيوت|brookhaven "}) 
 
 
