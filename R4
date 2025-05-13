@@ -1,7 +1,7 @@
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/R7KScript/usernaxo/refs/heads/main/GUI3")))()
 MakeWindow({
   Hub = {
-    Title = "H_R| کْلَ أّلَمًأّبًأّتٌ",
+    Title = "-- H_R SCRIPT | V.1.0 --",
     Animation = "جار التحميل... "
   },
   Key = {
@@ -27,7 +27,14 @@ MinimizeButton({
   StrokeColor = Color3.fromRGB(255, 255, 255)
 })
 
-local Main = MakeTab({Name = "منور|ة السكربت"})
+local Main = MakeTab({Name = "حـقـوق"})
+
+
+SetLabel(Label, "-- @hossein13390 تلي --")
+
+
+SetLabel(Label, "بل تلي موجود الباقي ما يهم")
+
 
 local Main = MakeTab({Name = "صّـمًلَأّتٌ عٌشُـوٌأّئيِّةّ"}) 
 
