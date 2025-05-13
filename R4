@@ -27,6 +27,7 @@ MinimizeButton({
   StrokeColor = Color3.fromRGB(255, 255, 255)
 })
 
+local Main = MakeTab({Name = "منور | ة السكربت"}) 
 
 local Main = MakeTab({Name = "صّـمًلَأّتٌ عٌشُـوٌأّئيِّةّ"}) 
 
