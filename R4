@@ -225,6 +225,14 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf
   end
 })
 
+AddButton(Main, {
+  Name = "Vfly | طِيِّرأّنِ سِـيِّأّرةّ",
+  Callback = function()
+    حط السكربت الي تريده هنا
+  end
+})
+
+
 local Main = MakeTab({Name = "ماب البيوت|brookhaven "}) 
 
 
