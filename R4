@@ -216,6 +216,15 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/
 })
 
 
+AddButton(Main, {
+  Name = "فُـلَيِّنِقُ قوي",
+  Callback = function()
+  -- https://scriptblox.com/script/Universal-Script-Fling-gui-v1-NEW-30872
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'),true))()
+  end
+})
+
 local Main = MakeTab({Name = "ماب البيوت|brookhaven "}) 
 
 
