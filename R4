@@ -232,6 +232,12 @@ AddButton(Main, {
   end
 })
 
+AddButton(Main, {
+  Name = "فُـلَأّشُ بًأّك",
+  Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/L"))()
+  end
+})
 
 local Main = MakeTab({Name = "ماب البيوت|brookhaven "}) 
 
@@ -269,6 +275,13 @@ AddButton(Main, {
   Name = "نص جي جي بروكهافن",
   Callback = function()
   loadstring(game:HttpGet("https://raw.githubusercontent.com/joygril/Brookhaven-RP-JG-Hub/refs/heads/main/Developer-Jeon-Canis.txt"))()
+  end
+})
+
+AddButton(Main, {
+  Name = "أّصّـوٌأّتٌ تٌـطِلَعٌ عٌنِدٍ أّلَنِأّسِ",
+  Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/nmalka01/nmalka01/refs/heads/main/Brookhaven_audio"))()
   end
 })
 
